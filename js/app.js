@@ -55,6 +55,19 @@ foodButtonImage.onclick = function () {
 };
 
 
+//////// BUTTON PRESS EFFECT
+$("#foodButtonImage").mousedown(function() {
+    $("#foodButtonImage").attr("src", "icons/button-pressed.png");
+})
+
+
+//////// BUTTON UNPRESS EFFECT
+$("#foodButtonImage").mouseup(function() {
+    $("#foodButtonImage").attr("src", "icons/button-unpressed.png");
+})
+
+
+
 
 
 
