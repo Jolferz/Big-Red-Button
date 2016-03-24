@@ -40,42 +40,35 @@ var foodOptions = {
     paella: function paellaa() {
         return ({title: "Paella!", text: "Good luck finding a place... You'll definitely need it.", imageUrl: "icons/paella.png"});
     },
-};  
+    fruit: function fruitt() {
+        return ({title: "Fruits!", text: "You will think: 'but it's just an apple', but lazyness got the best of me this time.", imageUrl: "icons/fruit.png"});
+    },
+    beer: function beerr() {
+        return ({title: "Beer!", text: "I know this is not food, but hey, we need variety!", imageUrl: "icons/beer.png"});
+    },
+};
 
 
 //////// ARRAY TO ACCESS THE FOOD OPTIONS
-var whatToEat = [foodOptions.pasta(), foodOptions.hamburger(), foodOptions.hotdog(), foodOptions.pizza(), foodOptions.taco(), foodOptions.sandwich(), foodOptions.sushi(), foodOptions.seafood(), foodOptions.meat(), foodOptions.soup(), foodOptions.chicken(), foodOptions.paella()];
+var whatToEat = [foodOptions.pasta(), foodOptions.hamburger(), foodOptions.hotdog(), foodOptions.pizza(), foodOptions.taco(), foodOptions.sandwich(), foodOptions.sushi(), foodOptions.seafood(), foodOptions.meat(), foodOptions.soup(), foodOptions.chicken(), foodOptions.paella(), foodOptions.fruit(), foodOptions.beer()];
 
 
 
 //////// RANDOM FOOD CHOICE
 // **** need to research how to swap the values of the a given variable, check: http://stackoverflow.com/questions/16201656/how-to-swap-two-variables-in-javascript
 foodButtonImage.onclick = function () {
-    var msg = swal(whatToEat[Math.floor((Math.random() * 11))]);   
+    var msg = swal(whatToEat[Math.floor((Math.random() * 13))]);
 };
 
+var $redButton = $("#foodButtonImage");
 
 //////// BUTTON PRESS EFFECT
-$("#foodButtonImage").mousedown(function() {
-    $("#foodButtonImage").attr("src", "icons/button-pressed.png");
-})
+$redButton.mousedown(function() {
+    $redButton.attr("src", "./icons/button-pressed.png");
+});
 
 
 //////// BUTTON UNPRESS EFFECT
-$("#foodButtonImage").mouseup(function() {
-    $("#foodButtonImage").attr("src", "icons/button-unpressed.png");
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$redButton.mouseup(function() {
+    $redButton.attr("src", "./icons/button-unpressed.png");
+});
