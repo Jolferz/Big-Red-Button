@@ -55,7 +55,6 @@ var whatToEat = [foodOptions.pasta(), foodOptions.hamburger(), foodOptions.hotdo
 
 
 //////// RANDOM FOOD CHOICE
-// **** need to research how to swap the values of the a given variable, check: http://stackoverflow.com/questions/16201656/how-to-swap-two-variables-in-javascript
 foodButtonImage.onclick = function () {
     var msg = swal(whatToEat[Math.floor((Math.random() * 13))]);
 };
